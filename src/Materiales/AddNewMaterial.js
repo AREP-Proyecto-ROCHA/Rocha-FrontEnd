@@ -127,5 +127,5 @@ class AddNewMaterial extends React.Component {
 
 export default AddNewMaterial;
 
-const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:5000" : "http://proyectoback-env.av6dmn2nyi.us-east-2.elasticbeanstalk.com");
+const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:8080" : "http://proyectoback-env.av6dmn2nyi.us-east-2.elasticbeanstalk.com");
 var axiosInstance;

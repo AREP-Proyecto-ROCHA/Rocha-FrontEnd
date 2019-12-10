@@ -58,6 +58,6 @@ class MaterialesList extends React.Component {
 
 export default MaterialesList;
 
-const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:5000" : "http://proyectoback-env.av6dmn2nyi.us-east-2.elasticbeanstalk.com");
+const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:8080" : "http://proyectoback-env.av6dmn2nyi.us-east-2.elasticbeanstalk.com");
 var axiosInstance;
 var kioskosListApi = (<div></div>);
