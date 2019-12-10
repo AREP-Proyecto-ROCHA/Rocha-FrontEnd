@@ -4,6 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import "./MaterialesItem.css";
+import moment from "moment";
 import { CardHeader } from "@material-ui/core";
 
 class MaterialesItem extends React.Component{
@@ -19,29 +20,25 @@ class MaterialesItem extends React.Component{
                     <CardHeader
                         title={
                             <Typography variant="h5">
-                               {this.props.cardInfo.titulo}
+                              Material
                             </Typography>
                         }
                         subheader={
                             <Typography variant="body1">
-                               Tipo: {this.props.cardInfo.tipo}
+                               FechaIngreso: {moment(this.props.cardInfo.fechaIngreso).format("DD-MM-YYYY")}
                             </Typography>
                         }
                     />
-                    <CardMedia 
-                        style={mediaClass}
-                        image={this.props.cardInfo.imageURL}
-                        title="Imagen Comida"
-                    />
+
                     <CardContent>
                         <Typography className="pos" color="textPrimary">
-                            Precio <b>{this.props.cardInfo.precio}</b>
+                            Cantidad <b>{this.props.cardInfo.cantidad}</b>
                         </Typography>
                         <Typography className="pos" color="textSecondary" >
-                            Kiosco <b>{this.props.cardInfo.kiosko}</b>
+                            Trabajador <b>{this.props.cardInfo.trabajadorId}</b>
                         </Typography>
                         <Typography>
-                            {this.props.cardInfo.descripcion}
+                            Material <b>{this.props.cardInfo.material}</b>
                         </Typography>
                     </CardContent>
                 </Card>

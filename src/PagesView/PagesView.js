@@ -1,8 +1,8 @@
 import React from "react";
 import DrawerAppBar from "../DrawerAppBar/DrawerAppBar";
 import { Route, Switch } from "react-router-dom";
-import NewsList from "../News/NewsList";
-import AddRetiros from "../News/AddNewForm";
+import NewsList from "../Retiros/NewsList";
+import AddRetiros from "../Retiros/AddNewForm";
 import MaterialesList from "../Materiales/MaterialesList";
 import AddNewMaterial from "../Materiales/AddNewMaterial";
 import ProducidosList from "../Producidos/ProducidosList";

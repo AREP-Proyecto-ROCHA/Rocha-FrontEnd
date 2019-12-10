@@ -16,7 +16,7 @@ class MaterialesList extends React.Component {
         if (this.state.loaded === false) {
             this.getKioskoItemsFromApi();
             return(
-                <h1>Loading from the kiosks</h1>
+                <h1>Cargando del Inventario</h1>
             );
         } else {
             return (
@@ -38,7 +38,7 @@ class MaterialesList extends React.Component {
     }
 
     getKioskoItemsFromApi(){
-        axiosInstance.get("/kioskos/menuItems")
+        axiosInstance.get("/inventario/ingresos")
         .then((response) => {
             var kioskoList2 = response.data.map((kioskosItem, i) => {
                 return(
@@ -58,6 +58,6 @@ class MaterialesList extends React.Component {
 
 export default MaterialesList;
 
-const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:8080" : "https://myuniapp-back.herokuapp.com");
+const apiURL = ((window.location.hostname === "localhost") ? "http://localhost:5000" : "http://proyectoback-env.av6dmn2nyi.us-east-2.elasticbeanstalk.com");
 var axiosInstance;
 var kioskosListApi = (<div></div>);
