@@ -1,0 +1,16 @@
+.svg_icons{
+    transform: scale(4);
+    margin: 37px;
+}
+
+.paper {
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+h2 {
+    text-align: center
+}

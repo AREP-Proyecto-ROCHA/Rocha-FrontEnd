@@ -1,0 +1,8 @@
+.accountIcon {
+    transform: scale(3);
+    margin-left: 10px;
+}
+
+.grow {
+    flex-grow: 1;
+}

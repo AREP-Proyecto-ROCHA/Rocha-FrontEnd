@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { PagesView } from "./PagesView/PagesView";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            // light: will be calculated from palette.primary.main,
+            main: "#f44336",
+            // dark: will be calculated from palette.primary.main,
+            // contrastText: will be calculated to contrast with palette.primary.main
+        },
+        secondary: {
+            //light: '#0066ff',
+            main: "#ffb300",
+            // dark: will be calculated from palette.secondary.main,
+            //contrastText: '#ffcc00',
+        },
+        // error: will use the default color
+    },
+    typography: {
+        useNextVariants: true,
+    },
+});
+
+const PagesViewView = () => (
+    <PagesView/>
+);
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                
+                <MuiThemeProvider theme={theme}>
+                    <Router>
+                        <div>
+                            <Route path="/app" component={PagesViewView}/>
+                        </div>
+                    </Router>
+                </MuiThemeProvider>
+            </div>
+        );
+    }
 }
 
 export default App;

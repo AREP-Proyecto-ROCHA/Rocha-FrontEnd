@@ -1,0 +1,24 @@
+.card {
+    minWidth: 275;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bullet {
+    display: 'inline-block';
+    margin: '0 2px';
+    transform: 'scale(0.8)';
+}
+
+.title {
+    fontSize: 14;
+}
+
+.pos {
+    marginBottom: 12;
+}
+
+.status {
+    transform: scale(1.5);
+    margin: 20px;
+}
